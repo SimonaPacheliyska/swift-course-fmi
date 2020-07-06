@@ -1,4 +1,4 @@
-class Player {
+public class Player {
     let name: String
     var points: Int
 
@@ -21,5 +21,9 @@ class Player {
 
     public func addPoints(points: Int) {
         self.points += points
+    }
+
+    deinit {
+        print("Disposing player \(name)")
     }
 }
