@@ -1,11 +1,11 @@
 import Foundation
 public class Game {
-    private var zombies: [Player]
+    private var zombies: [Zombie]
 
     init(zombiesNames:[String]) {
         self.zombies = []
         for zombieName in zombiesNames {
-           zombies.append(Player(name: zombieName))
+           zombies.append(Zombie(name: zombieName))
         }
     }
 
