@@ -23,4 +23,13 @@ enum DiceFace {
     case brain
     case footsteps
     case gun
+
+    func symbolFace() -> String {
+        switch self {
+            case .brain: return "🧠"
+            case .footsteps: return "👣"
+            case .gun: return "💥"
+        }
+    }
+
 }
