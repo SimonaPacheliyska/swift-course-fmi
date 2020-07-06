@@ -24,6 +24,6 @@ public class Zombie {
     }
 
     deinit {
-        print("Disposing player \(name)")
+        print("Disposing zombie \(name)")
     }
 }
