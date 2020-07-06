@@ -7,8 +7,12 @@ class Player {
        self.points = points; 
     }
 
+    public func getName() -> String{
+        return self.name
+    }
+
     public func getPoints() -> Int {
-        return points
+        return self.points
     }
 
     public func resetPoints() {  
