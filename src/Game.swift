@@ -8,7 +8,7 @@ public class Game {
         }
     }
 
-     public func resetAllScores() {
+     public func resetAllPoints() {
         for zombie in zombies {
             zombie.resetPoints()
         }
