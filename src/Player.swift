@@ -1,6 +1,6 @@
 public class Player {
-    let name: String
-    var points: Int
+    private let name: String
+    private var points: Int
 
     init(name: String, points: Int = 0){
        self.name = name;
