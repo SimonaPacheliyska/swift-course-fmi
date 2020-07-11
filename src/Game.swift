@@ -4,7 +4,7 @@ public class Game {
   public func startGame() {
     print("Welcome to Zombie Dice!!!")
     print("1. Let's play")
-    print("2. Let's learn the rule")
+    print("2. Let's learn the rules")
     print("Make selection: ", terminator: "")
 
     let choice = readLine()
