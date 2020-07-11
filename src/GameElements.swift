@@ -22,7 +22,7 @@ public class DiceRoller {
     let yellowDice = ["🧠", "🧠", "💥", "💥", "👣", "👣"]
 
     for i in 1...13 {
-      if i < 7{
+      if i < 7 {
         dices.append(.init(sides: greenDice))
       }
       else if i < 11 {
