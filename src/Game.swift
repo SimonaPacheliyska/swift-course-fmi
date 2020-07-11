@@ -1,27 +1,46 @@
 import Foundation
+
 public class Game {
-    private var zombies: [Zombie]
+  public func startGame() {
+    print("Welcome to Zombie Dice!!!")
+    print("1. Let's play")
+    print("2. Let's learn the rule")
+    print("Make selection: ", terminator: "")
 
-    init(zombiesNames:[String]) {
-        self.zombies = []
-        for zombieName in zombiesNames {
-           zombies.append(Zombie(name: zombieName))
-        }
+    let choice = readLine()
+
+    if choice != "1" && choice != "2" {
+      print("Invalid selection!!")
+      return
     }
 
-    public func resetAllPoints() {
-        for zombie in zombies {
-            zombie.resetPoints()
-        }
+    if choice == "2" {
+      print( "You can learn the rules at https://github.com/SimonaPacheliyska/zombie-dice" )
+      print("When ready with reading the rules, press any key")
+      readLine()
     }
 
-    public func scoreTable() -> String {
-        var table = "===\nScores:\n";
-        for zombie in zombies {
-            table += ("Zombie \(zombie.getName()), points - \(zombie.getPoints())\n")
-        }
-        table+="==="
-        return table;
+    print("Enter players names, separated with spaces. Enter between 2 and 8 playes")
+
+    let playersString = readLine()!
+    let players = playersString.components(separatedBy: " ")
+
+    if players.count < 2 {
+      print("At least 2 players must be selected")
+      return;
+    }
+    else if players.count > 8 {
+      print("Up to 8 players can play Zombi Dice, sorry :(")
+      return
     }
 
+    var actualPlayers = [Player]()
+    for player in players {
+      actualPlayers.append(.init(name: player, brainPoints: 0))
+    }
+
+    let gameLogic = GameLogic(players: actualPlayers)
+    gameLogic.runGame()
+    print("\nThank you for spending time with Zombie Dice")
+  }
 }
