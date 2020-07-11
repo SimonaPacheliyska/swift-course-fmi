@@ -28,7 +28,7 @@ public class DiceRoller {
       else if i < 11 {
         dices.append(.init(sides: yellowDice))
       }
-      else{
+      else {
         dices.append(.init(sides: redDice))
       }
     }
