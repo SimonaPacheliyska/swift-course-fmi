@@ -10,17 +10,17 @@ public class Game {
     let choice = readLine()
 
     if choice != "1" && choice != "2" {
-      print("Invalid selection!!")
+      print("Invalid selection!")
       return
     }
 
     if choice == "2" {
       print( "You can learn the rules at https://github.com/SimonaPacheliyska/zombie-dice" )
-      print("When ready with reading the rules, press any key")
+      print("When you are ready with reading the rules, press any key")
       readLine()
     }
 
-    print("Enter players names, separated with spaces. Enter between 2 and 8 playes")
+    print("Enter players' names, separated with spaces. Enter between 2 and 8 playes")
 
     let playersString = readLine()!
     let players = playersString.components(separatedBy: " ")
