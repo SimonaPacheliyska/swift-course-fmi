@@ -1,5 +1,5 @@
 # Стартиране:
-***Компилиране***: swiftc -o main Game.swift GameElements.swift GameLogic.swift Player.swift main.swift<br>
+***Компилиране***: swiftc -o main Game.swift GameElements.swift GameLogic.swift Player.swift main.swift<br><br>
 ***Стартиране***: run main.swift
 
 # Описание:
