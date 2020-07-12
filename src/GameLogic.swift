@@ -1,18 +1,25 @@
 public class GameLogic {
   public var players : [Player]
   var winners: [Player]
+  var tablePrint: TablePrint
 
   public init(players: [Player]) {
-      self.winners = [Player]()
       self.players = players;
+      self.winners = [Player]()
+      tablePrint = TablePrint(players: self.players)
   }
 
   public func runGame() {
     while winners.count == 0 {
-      for player in players{
-        printTable(player: player.name)
+      for player in players {
+        print("Score")
+        
+        printTable()
+
         print("\n")
         player.doTurn()
+
+        tablePrint.updatePlayerInfo(p: player)
 
         if player.brainPoints >= 13 {
           winners.append(.init(name: player.name, brainPoints: player.brainPoints))
@@ -22,12 +29,8 @@ public class GameLogic {
     printWinners();
   }
 
-  public func printTable(player: String) {
-    print("\n===")
-    print(player + " is at turn")
-    print("\n===")
-    
-    
+  public func printTable() {
+    tablePrint.printTable()
   }
 
   public func printWinners() {
