@@ -1,5 +1,6 @@
 # Стартиране:
-swiftc -o main Game.swift GameElements.swift GameLogic.swift Player.swift main.swift
+***Компилиране***: swiftc -o main Game.swift GameElements.swift GameLogic.swift Player.swift main.swift<br>
+***Стартиране***: run main.swift<br><br>
 
 # Описание:
 "Zombie Dice" е елементарна парти игра за 2-8 играчи - в нея играчите са зомби, което иска да изяде колкото се може повече мозъци. 
