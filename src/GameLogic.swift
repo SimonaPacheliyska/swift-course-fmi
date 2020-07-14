@@ -1,3 +1,7 @@
+/**
+* Represents the main game logic.
+* Contains a list of Players, winners and table for printing the current results
+*/
 public class GameLogic {
   public var players : [Player]
   var winners: [Player]
@@ -8,7 +12,11 @@ public class GameLogic {
       self.winners = [Player]()
       tablePrint = TablePrint(players: self.players)
   }
-
+/**
+* Prints the table containing the current results.
+* Player[i] is on turn
+* Update player's[i] points in the table
+*/
   public func runGame() {
     while winners.count == 0 {
       for player in players {
