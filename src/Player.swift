@@ -1,3 +1,6 @@
+/**
+* Represents Player object.
+*/
 public class Player {
 
   public var name : String
@@ -12,6 +15,11 @@ public class Player {
     self.dicer = DiceRoller()
   }
 
+/**
+* Represents action on turn.
+* Picks a dice, makes a hand, adds point for each element in the hand.
+* If shotgun points are more than 3 - the player that is on turn finishes his turn, so we reset the points
+*/
   public func doTurn() {
     print("#########\n\(name) is at turn")
 
