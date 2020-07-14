@@ -37,7 +37,7 @@ public class DiceRoller {
 
   public func pickDice() -> [Dice] {
     var result = [Dice]()
-    for _ in 0..< min(3, currentDice.count) {
+    for _ in 0..<min(3, currentDice.count) {
         currentDice.shuffle()
         result.append(currentDice.removeFirst())
     }

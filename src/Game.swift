@@ -17,7 +17,6 @@ public class Game {
     if choice == "2" {
       print( "You can learn the rules at https://github.com/SimonaPacheliyska/zombie-dice" )
       print("When you are ready with reading the rules, press any key")
-      readLine()
     }
 
     print("Enter players' names, separated with spaces. Enter between 2 and 8 playes")
