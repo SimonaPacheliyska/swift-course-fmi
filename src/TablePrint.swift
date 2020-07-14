@@ -1,3 +1,7 @@
+/**
+* Represents the table that should be printed on each step of playing the game.
+* Contains a list of Players so it can be used for extracting their names and brain points.
+*/
 public class TablePrint {
   public var players : [Player]
 
